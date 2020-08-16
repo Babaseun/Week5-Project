@@ -1,0 +1,9 @@
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\bin\Debug\netstandard2.0\CalculatorClassLibrary.deps.json
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\bin\Debug\netstandard2.0\CalculatorClassLibrary.dll
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\bin\Debug\netstandard2.0\CalculatorClassLibrary.pdb
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\obj\Debug\netstandard2.0\CalculatorClassLibrary.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\obj\Debug\netstandard2.0\CalculatorClassLibrary.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\obj\Debug\netstandard2.0\CalculatorClassLibrary.AssemblyInfo.cs
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\obj\Debug\netstandard2.0\CalculatorClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\obj\Debug\netstandard2.0\CalculatorClassLibrary.dll
+C:\Users\hp\Desktop\Project2\CalculatorClassLibrary\obj\Debug\netstandard2.0\CalculatorClassLibrary.pdb

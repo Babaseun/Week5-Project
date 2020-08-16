@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MarketWomanCalculator/1.0.0": {
+        "dependencies": {
+          "CalculatorClassLibrary": "1.0.0"
+        },
+        "runtime": {
+          "MarketWomanCalculator.dll": {}
+        }
+      },
+      "CalculatorClassLibrary/1.0.0": {
+        "runtime": {
+          "CalculatorClassLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MarketWomanCalculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculatorClassLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
