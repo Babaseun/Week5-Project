@@ -1,7 +1,8 @@
 ﻿namespace CalculatorClassLibrary
 {
-    public interface IOperatorRepository
+    public interface ICalculatorRepository
     {
+
         double Addition(double firstNumber, double secondNumber);
 
         double Minus(double firstNumber, double secondNumber);
@@ -10,6 +11,6 @@
 
         double Divide(double firstNumber, double secondNumber);
 
-        double Calculate(string value);
+        double Calculate(Calculator calculator);
     }
 }

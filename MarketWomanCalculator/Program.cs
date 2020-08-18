@@ -19,7 +19,7 @@ namespace MarketWomanCalculator
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IOperatorRepository Calc = GlobalConfig.Iinstance;
+            ICalculatorRepository Calc = GlobalConfig.Iinstance;
             Application.Run(new CalculatorUI(Calc));
             GlobalConfig.RemoveInstance();
 

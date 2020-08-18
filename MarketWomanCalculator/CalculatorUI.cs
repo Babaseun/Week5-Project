@@ -13,40 +13,68 @@ namespace MarketWomanCalculator
 {
     public partial class CalculatorUI : Form
     {
-        private IOperatorRepository calc;
+        private ICalculatorRepository calc;
+        public string Sign;
+        public string values;
 
-        public CalculatorUI(IOperatorRepository calc)
+        public CalculatorUI(ICalculatorRepository calc)
         {
             InitializeComponent();
             this.calc = calc;
 
         }
 
-       
-
         private void Button_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
+
             if (textBox1.Text == "0")
             {
                 textBox1.Clear();
             }
             textBox1.Text += button.Text;
+            values += button.Text;
         }
 
         private void Operator_Clicked(object sender, EventArgs e)
         {
+
             Button button = (Button)sender;
-            if (textBox1.Text == "0")
+
+            if (textBox1.Text != "0")
             {
-                textBox1.Clear();
+                textBox1.Text += button.Text;
+                Sign = button.Text;
+                values += button.Text;
+
+
             }
-            textBox1.Text += button.Text;
+            if (Utils.CountValues(values) >= 2)
+            {
+                
+
+                var removeLast = values.Remove(values.Length - 1);
+                var data = Utils.ExtractValues(removeLast);
+
+                Calculator calculatorData = new Calculator(data[0], data[1], Sign);
+
+                 
+                var result = calc.Calculate(calculatorData);
+
+                textBox2.Text = result.ToString() + Sign;
+                
+                calculatorData.Result = result.ToString();
+                values = result.ToString() + Sign;
+
+            }
+
 
         }
         private void Clear_Button_Clicked(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            textBox1.Text = "0";
+            textBox2.Text = "";
+            values = "";
 
         }
 
@@ -54,8 +82,29 @@ namespace MarketWomanCalculator
 
         private void Calculate_Button_Click(object sender, EventArgs e)
         {
-            var res = calc.Calculate(textBox1.Text);
-            textBox1.Text = res.ToString();
+            
+                var data = Utils.ExtractValues(values);
+
+                Calculator calculatorData = new Calculator(data[0], data[1], Sign);
+
+
+                var result = calc.Calculate(calculatorData);
+
+                textBox2.Text = result.ToString();
+                calculatorData.Result = result.ToString();
+                values = result.ToString();
+            
+
+        }
+
+        private void CalculatorUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearEntry_Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

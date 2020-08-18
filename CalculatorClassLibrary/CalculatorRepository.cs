@@ -5,12 +5,12 @@ using MarketWomanCalculator;
 
 namespace CalculatorClassLibrary
 {
-    public class OperatorRepository : IOperatorRepository
+    public class CalculatorRepository : ICalculatorRepository
     {
-        public  double Addition(double firstNumber, double secondNumber)
+        public double Addition(double firstNumber, double secondNumber)
         {
-           var result = firstNumber + secondNumber;
-           return result;
+            var result = firstNumber + secondNumber;
+            return result;
         }
 
         public double Minus(double firstNumber, double secondNumber)
@@ -30,27 +30,23 @@ namespace CalculatorClassLibrary
             return result;
         }
 
-        public double Calculate(string value)
+        public double Calculate(Calculator calculator)
         {
-            
-            OperatorRepository op = new OperatorRepository();
 
-            var res = Utils.ExtractValues(value);
-            var ope = Utils.ExtractOperator(value);
-            switch (ope)
+            CalculatorRepository process = new CalculatorRepository();
+
+            switch (calculator.Sign)
             {
                 case "+":
-                    return op.Addition(double.Parse(res[0]), double.Parse(res[1]));
-                   
-                case "-":
-                    return op.Minus(double.Parse(res[0]), double.Parse(res[1]));
+                    return process.Addition(calculator.FirstValue, calculator.SecondValue);
 
+                case "-":
+                    return process.Minus(calculator.FirstValue, calculator.SecondValue);
 
                 case "*":
-                    return op.Times(double.Parse(res[0]), double.Parse(res[1]));
+                    return process.Times(calculator.FirstValue, calculator.SecondValue);
                 case "/":
-                    return op.Divide(double.Parse(res[0]), double.Parse(res[1]));
-
+                    return process.Divide(calculator.FirstValue, calculator.SecondValue);
 
                 default:
                     return 0;

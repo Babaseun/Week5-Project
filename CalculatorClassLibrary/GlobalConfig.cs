@@ -3,11 +3,11 @@
 {
     public static class GlobalConfig
     {
-        public static IOperatorRepository Iinstance { get; private set; }
+        public static ICalculatorRepository Iinstance { get; private set; }
 
         public static void AddInstance()
         {
-            OperatorRepository op = new OperatorRepository();
+            CalculatorRepository op = new CalculatorRepository();
             Iinstance = op;
         }
 

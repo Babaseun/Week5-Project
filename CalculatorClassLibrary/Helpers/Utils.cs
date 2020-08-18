@@ -6,31 +6,29 @@ using System.Text.RegularExpressions;
 
 namespace MarketWomanCalculator
 {
-    static class Utils
+    public static class Utils
     {
-        public static List<string> ExtractValues(string value)
+        public static List<double> ExtractValues(string value)
         {
-           
+
             var operators = Regex.Match(value, "[-|+|/|*]");
 
             var firstValue = value.Substring(0, operators.Index);
             var secondValue = string.Join("", value.Skip(firstValue.Length + 1));
 
-            return new List<string> { firstValue, secondValue };
-
+            return new List<double> { double.Parse(firstValue), double.Parse(secondValue) };
 
         }
 
-        public static string ExtractOperator(string value)
+        public static int CountValues(string value)
         {
 
-            var operators = Regex.Match(value, "[-|+|/|*]");
+            var values = Regex.Matches(value, "[-|+|/|*]");
 
-
-
-            return operators.Value;
-
+            return values.Count;
 
         }
+
     }
 }
+
