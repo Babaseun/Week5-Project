@@ -21,20 +21,7 @@ namespace Calculator.Test
 
         }
 
-        [Fact]
-        public void Minus()
-        {
-            int firstValue = 10;
-            int secondValue = 5;
-
-            CalculatorRepository op = new CalculatorRepository();
-            var result = op.Minus(firstValue, secondValue);
-
-
-            Assert.Equal(5, result);
-
-
-        }
+       
         [Fact]
         public void Times()
         {
@@ -46,6 +33,34 @@ namespace Calculator.Test
 
 
             Assert.Equal(25, result);
+
+
+        }
+        [Fact]
+        public void Minus()
+        {
+            int firstValue = 5;
+            int secondValue = 5;
+
+            CalculatorRepository op = new CalculatorRepository();
+            var result = op.Times(firstValue, secondValue);
+
+
+            Assert.Equal(25, result);
+
+
+        }
+        [Fact]
+        public void Divide()
+        {
+            int firstValue = 4;
+            int secondValue = 2;
+
+            CalculatorRepository op = new CalculatorRepository();
+            var result = op.Divide(firstValue, secondValue);
+
+
+            Assert.Equal(2, result);
 
 
         }

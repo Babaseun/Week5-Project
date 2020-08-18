@@ -7,27 +7,36 @@ namespace CalculatorClassLibrary
 {
     public class CalculatorRepository : ICalculatorRepository
     {
-        public double Addition(double firstNumber, double secondNumber)
+        public double Addition(int firstNumber, int secondNumber)
         {
             var result = firstNumber + secondNumber;
             return result;
         }
 
-        public double Minus(double firstNumber, double secondNumber)
+        public double Minus(int firstNumber, int secondNumber)
         {
             var result = firstNumber - secondNumber;
             return result;
         }
 
-        public double Times(double firstNumber, double secondNumber)
+        public double Times(int firstNumber, int secondNumber)
         {
             return firstNumber * secondNumber;
         }
 
-        public double Divide(double firstNumber, double secondNumber)
+        public double Divide(int firstNumber, int secondNumber)
         {
-            var result = firstNumber / secondNumber;
-            return result;
+            try
+            {
+                var result = firstNumber / secondNumber;
+                return result;
+            }
+            catch (DivideByZeroException)
+            {
+                return 0;
+             
+            }
+            
         }
 
         public double Calculate(Calculator calculator)
@@ -49,7 +58,7 @@ namespace CalculatorClassLibrary
                     return process.Divide(calculator.FirstValue, calculator.SecondValue);
 
                 default:
-                    return 0;
+                    return -1;
             }
 
 

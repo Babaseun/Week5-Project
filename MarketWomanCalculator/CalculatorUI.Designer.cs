@@ -48,7 +48,6 @@
             this.button20 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -310,19 +309,11 @@
             this.textBox2.Text = "\r\n";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(37, 568);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(479, 27);
-            this.textBox3.TabIndex = 3;
-            // 
             // CalculatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 676);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(535, 568);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button20);
@@ -375,7 +366,6 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

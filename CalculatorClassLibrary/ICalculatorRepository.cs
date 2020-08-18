@@ -3,13 +3,13 @@
     public interface ICalculatorRepository
     {
 
-        double Addition(double firstNumber, double secondNumber);
+        double Addition(int firstNumber, int secondNumber);
 
-        double Minus(double firstNumber, double secondNumber);
+        double Minus(int firstNumber, int secondNumber);
 
-        double Times(double firstNumber, double secondNumber);
+        double Times(int firstNumber, int secondNumber);
 
-        double Divide(double firstNumber, double secondNumber);
+        double Divide(int firstNumber, int secondNumber);
 
         double Calculate(Calculator calculator);
     }

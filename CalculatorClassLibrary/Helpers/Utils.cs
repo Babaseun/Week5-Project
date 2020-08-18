@@ -8,15 +8,23 @@ namespace MarketWomanCalculator
 {
     public static class Utils
     {
-        public static List<double> ExtractValues(string value)
+        public static List<int> ExtractValues(string value)
         {
 
-            var operators = Regex.Match(value, "[-|+|/|*]");
+            try
+            {
+                var operators = Regex.Match(value, "[-|+|/|*]");
 
-            var firstValue = value.Substring(0, operators.Index);
-            var secondValue = string.Join("", value.Skip(firstValue.Length + 1));
+                var firstValue = value.Substring(0, operators.Index);
+                var secondValue = string.Join("", value.Skip(firstValue.Length + 1));
 
-            return new List<double> { double.Parse(firstValue), double.Parse(secondValue) };
+                return new List<int> { int.Parse(firstValue), int.Parse(secondValue) };
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
 
         }
 

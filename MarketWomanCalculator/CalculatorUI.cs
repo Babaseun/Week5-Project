@@ -16,6 +16,7 @@ namespace MarketWomanCalculator
         private ICalculatorRepository calc;
         public string Sign;
         public string values;
+        public int Count = 0;
 
         public CalculatorUI(ICalculatorRepository calc)
         {
@@ -32,8 +33,11 @@ namespace MarketWomanCalculator
             {
                 textBox1.Clear();
             }
+           
+
             textBox1.Text += button.Text;
             values += button.Text;
+
         }
 
         private void Operator_Clicked(object sender, EventArgs e)
@@ -41,30 +45,42 @@ namespace MarketWomanCalculator
 
             Button button = (Button)sender;
 
+
             if (textBox1.Text != "0")
             {
                 textBox1.Text += button.Text;
                 Sign = button.Text;
+         
                 values += button.Text;
 
-
             }
-            if (Utils.CountValues(values) >= 2)
+            Count++;
+
+            if (Count >= 2)
             {
+                try
+                {
+                    var removeLast = values.Remove(values.Length - 1);
+
+                    var data = Utils.ExtractValues(removeLast);
+
+                    Calculator calculatorData = new Calculator(data[0], data[1], Sign);
+
+
+                    var result = calc.Calculate(calculatorData);
+
+
+                    textBox2.Text = result.ToString();
+
+                    values = result.ToString() + Sign;
+                }
+                catch (Exception ex)
+                {
+
+                }
                 
 
-                var removeLast = values.Remove(values.Length - 1);
-                var data = Utils.ExtractValues(removeLast);
 
-                Calculator calculatorData = new Calculator(data[0], data[1], Sign);
-
-                 
-                var result = calc.Calculate(calculatorData);
-
-                textBox2.Text = result.ToString() + Sign;
-                
-                calculatorData.Result = result.ToString();
-                values = result.ToString() + Sign;
 
             }
 
@@ -75,7 +91,9 @@ namespace MarketWomanCalculator
             textBox1.Text = "0";
             textBox2.Text = "";
             values = "";
+            Sign = "";
 
+            Count = 0;
         }
 
 
@@ -86,13 +104,19 @@ namespace MarketWomanCalculator
                 var data = Utils.ExtractValues(values);
 
                 Calculator calculatorData = new Calculator(data[0], data[1], Sign);
-
-
                 var result = calc.Calculate(calculatorData);
 
+           
+
+            if (result == 0)
+            {
+               textBox2.Text = Errors.DivideByZeroExceptionMessage();
+            }
+            else
+            {
                 textBox2.Text = result.ToString();
-                calculatorData.Result = result.ToString();
                 values = result.ToString();
+            }
             
 
         }
