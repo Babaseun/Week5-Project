@@ -7,7 +7,7 @@ namespace MarketWomanCalculator
     public partial class CalculatorUI : Form
     {
         private ICalculatorRepository calc;
-        public string Sign; // Stores the sign
+        public string Sign; // Stores the sign / operator
         public string values; // Operation will be done based on input values added here based on the user input
         public int Count = 0; // Keeps track of the number of times a button is clicked
 
