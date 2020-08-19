@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+DreDGPGOpUFsvrWKkiHrRPARy0xaU4jDz6YbFtQLtFK/I/HT+mOtSWoY8kvuknBWjaBCU1erZGRp7fDi2/LUg==",
+  "dgSpecHash": "c3jkhFWCMHvQCMiXsduRUWkf1hkOWrEhNTn/AdnqRtmEr0xJTxRWxXYgyn/PTEwG0SRRgRipuCrWpyTCjl1quA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

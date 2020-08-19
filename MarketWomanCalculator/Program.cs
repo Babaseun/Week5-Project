@@ -1,8 +1,5 @@
-using CalculatorClassLibrary;
+using CalculatorLibrary;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MarketWomanCalculator
@@ -19,7 +16,7 @@ namespace MarketWomanCalculator
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ICalculatorRepository Calc = GlobalConfig.Iinstance;
+            ICalculatorRepository Calc = GlobalConfig.Instance;
             Application.Run(new CalculatorUI(Calc));
             GlobalConfig.RemoveInstance();
 

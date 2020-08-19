@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "CalculatorClassLibrary/1.0.0": {
+      "CalculatorLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/CalculatorClassLibrary.dll": {}
+          "bin/placeholder/CalculatorLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CalculatorClassLibrary.dll": {}
+          "bin/placeholder/CalculatorLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "CalculatorClassLibrary/1.0.0": {
+    "CalculatorLibrary/1.0.0": {
       "type": "project",
-      "path": "../CalculatorClassLibrary/CalculatorClassLibrary.csproj",
-      "msbuildProject": "../CalculatorClassLibrary/CalculatorClassLibrary.csproj"
+      "path": "../CalculatorClassLibrary/CalculatorLibrary.csproj",
+      "msbuildProject": "../CalculatorClassLibrary/CalculatorLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "CalculatorClassLibrary >= 1.0.0"
+      "CalculatorLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -57,8 +57,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj"
+            "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj"
             }
           }
         }

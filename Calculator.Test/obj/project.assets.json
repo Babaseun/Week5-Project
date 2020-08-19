@@ -902,14 +902,14 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "CalculatorClassLibrary/1.0.0": {
+      "CalculatorLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/CalculatorClassLibrary.dll": {}
+          "bin/placeholder/CalculatorLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CalculatorClassLibrary.dll": {}
+          "bin/placeholder/CalculatorLibrary.dll": {}
         }
       }
     }
@@ -3505,15 +3505,15 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "CalculatorClassLibrary/1.0.0": {
+    "CalculatorLibrary/1.0.0": {
       "type": "project",
-      "path": "../CalculatorClassLibrary/CalculatorClassLibrary.csproj",
-      "msbuildProject": "../CalculatorClassLibrary/CalculatorClassLibrary.csproj"
+      "path": "../CalculatorClassLibrary/CalculatorLibrary.csproj",
+      "msbuildProject": "../CalculatorClassLibrary/CalculatorLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "CalculatorClassLibrary >= 1.0.0",
+      "CalculatorLibrary >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
@@ -3551,8 +3551,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj"
+            "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj"
             }
           }
         }

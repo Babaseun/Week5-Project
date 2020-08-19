@@ -1,37 +1,61 @@
-﻿using System.Text.RegularExpressions;
-using System;
-using System.Linq;
-using MarketWomanCalculator;
+﻿using System;
 
-namespace CalculatorClassLibrary
+namespace CalculatorLibrary
 {
     public class CalculatorRepository : ICalculatorRepository
     {
+        /// <summary>
+        /// Returns the addition of two numbers based on the blue print of class calculator
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <returns>
+        /// Return a value type double
+        /// </returns>
         public double Addition(double firstNumber, double secondNumber)
         {
-            if (firstNumber < 0 || secondNumber < 0)
-            {
-                throw new ArgumentException("Please enter valid values");
-            }
-            else
-            {
-                var result = firstNumber + secondNumber;
-                return result;
-            }
-           
+
+            var result = firstNumber + secondNumber;
+            return result;
+
+
         }
 
-        public double Minus(double firstNumber , double secondNumber )
+        /// <summary>
+        /// Returns the subtraction of two numbers
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <returns></returns>
+        public double Minus(double firstNumber, double secondNumber)
         {
             var result = firstNumber - secondNumber;
             return result;
         }
 
+        /// <summary>
+        /// Returns the multiplication of two numbers
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <returns>
+        /// Returns the result of the multiplication 
+        /// </returns>
         public double Times(double firstNumber, double secondNumber)
         {
             return firstNumber * secondNumber;
         }
 
+        /// <summary>
+        /// Divides two numbers the firstNumber and secondNumber 
+        /// and also checks if division by 0 is passed to the method
+        /// in which a DivideByZeroException Error is thrown
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <returns>
+        /// Returns the result of the division
+        /// </returns>
         public double Divide(double firstNumber, double secondNumber)
         {
             if (firstNumber == 0 || secondNumber == 0)
@@ -51,6 +75,14 @@ namespace CalculatorClassLibrary
 
         }
 
+        /// <summary>
+        /// These is where the calculation process is executed
+        /// it receives a value type calculator
+        /// which contains the property of the firstValue,
+        /// secondValue and the operator
+        /// </summary>
+        /// <param name="calculator"></param>
+        /// <returns></returns>
         public double Calculate(Calculator calculator)
         {
 

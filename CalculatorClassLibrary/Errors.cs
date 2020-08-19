@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CalculatorClassLibrary
+﻿namespace CalculatorLibrary
 {
+    /// <summary>
+    /// A Error message to sent to the UI based
+    /// on calculation done dividing by zero
+    /// </summary>
     public class Errors
     {
         public static string DivideByZeroExceptionMessage()

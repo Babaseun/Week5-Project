@@ -1,5 +1,8 @@
-﻿namespace CalculatorClassLibrary
+﻿namespace CalculatorLibrary
 {
+    /// <summary>
+    /// A Calculator Class an object of this class will contain the property values
+    /// </summary>
     public class Calculator
     {
         public double FirstValue { get; set; }

@@ -1,5 +1,9 @@
-﻿namespace CalculatorClassLibrary
+﻿namespace CalculatorLibrary
 {
+
+    /// <summary>
+    /// An interface for the Calculator repository class
+    /// </summary>
     public interface ICalculatorRepository
     {
 

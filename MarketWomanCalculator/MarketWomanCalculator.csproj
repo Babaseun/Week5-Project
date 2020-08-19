@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalculatorClassLibrary\CalculatorClassLibrary.csproj" />
+    <ProjectReference Include="..\CalculatorClassLibrary\CalculatorLibrary.csproj" />
   </ItemGroup>
 
 </Project>

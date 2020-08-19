@@ -1,4 +1,4 @@
-using CalculatorClassLibrary;
+using CalculatorLibrary;
 using System;
 using Xunit;
 
@@ -6,6 +6,9 @@ namespace Calculator.Test
 {
     public class UnitTest1
     {
+        /// <summary>
+        /// Test for addition of values
+        /// </summary>
         [Fact]
         public void Addition()
         {
@@ -22,6 +25,9 @@ namespace Calculator.Test
         }
 
        
+        /// <summary>
+        /// Test for the multiplication of values
+        /// </summary>
         [Fact]
         public void Times()
         {
@@ -36,6 +42,9 @@ namespace Calculator.Test
 
 
         }
+        /// <summary>
+        /// Test for the subtraction of values
+        /// </summary>
         [Fact]
         public void Minus()
         {
@@ -50,6 +59,9 @@ namespace Calculator.Test
 
 
         }
+        /// <summary>
+        /// Test for the division of values
+        /// </summary>
         [Fact]
         public void Divide()
         {
@@ -64,6 +76,9 @@ namespace Calculator.Test
 
 
         }
+        /// <summary>
+        /// Making sure an error is thrown when an attempt is made to divide by zero
+        /// </summary>
         [Fact]
         public void DivideByZero()
         {
@@ -72,9 +87,7 @@ namespace Calculator.Test
 
             CalculatorRepository op = new CalculatorRepository();
            
-
-
-            Assert.Throws<DivideByZeroException>(() => op.Divide(firstValue, secondValue));
+ Assert.Throws<DivideByZeroException>(() => op.Divide(firstValue, secondValue));
             
 
 

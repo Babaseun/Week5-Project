@@ -8,15 +8,15 @@
     ".NETCoreApp,Version=v3.1": {
       "MarketWomanCalculator/1.0.0": {
         "dependencies": {
-          "CalculatorClassLibrary": "1.0.0"
+          "CalculatorLibrary": "1.0.0"
         },
         "runtime": {
           "MarketWomanCalculator.dll": {}
         }
       },
-      "CalculatorClassLibrary/1.0.0": {
+      "CalculatorLibrary/1.0.0": {
         "runtime": {
-          "CalculatorClassLibrary.dll": {}
+          "CalculatorLibrary.dll": {}
         }
       }
     }
@@ -27,7 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CalculatorClassLibrary/1.0.0": {
+    "CalculatorLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

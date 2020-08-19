@@ -13,6 +13,6 @@ C:\Users\hp\Desktop\Project2\MarketWomanCalculator\obj\Debug\netcoreapp3.1\Marke
 C:\Users\hp\Desktop\Project2\MarketWomanCalculator\obj\Debug\netcoreapp3.1\MarketWomanCalculator.dll
 C:\Users\hp\Desktop\Project2\MarketWomanCalculator\obj\Debug\netcoreapp3.1\MarketWomanCalculator.pdb
 C:\Users\hp\Desktop\Project2\MarketWomanCalculator\obj\Debug\netcoreapp3.1\MarketWomanCalculator.genruntimeconfig.cache
-C:\Users\hp\Desktop\Project2\MarketWomanCalculator\bin\Debug\netcoreapp3.1\CalculatorClassLibrary.dll
-C:\Users\hp\Desktop\Project2\MarketWomanCalculator\bin\Debug\netcoreapp3.1\CalculatorClassLibrary.pdb
 C:\Users\hp\Desktop\Project2\MarketWomanCalculator\obj\Debug\netcoreapp3.1\MarketWomanCalculator.csproj.CopyComplete
+C:\Users\hp\Desktop\Project2\MarketWomanCalculator\bin\Debug\netcoreapp3.1\CalculatorLibrary.dll
+C:\Users\hp\Desktop\Project2\MarketWomanCalculator\bin\Debug\netcoreapp3.1\CalculatorLibrary.pdb

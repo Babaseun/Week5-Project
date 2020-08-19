@@ -31,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj": {
-                "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj"
+              "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj": {
+                "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj"
               }
             }
           }
@@ -82,12 +82,12 @@
         }
       }
     },
-    "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj": {
+    "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj",
-        "projectName": "CalculatorClassLibrary",
-        "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorClassLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj",
+        "projectName": "CalculatorLibrary",
+        "projectPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\CalculatorLibrary.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\Desktop\\Project2\\CalculatorClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
