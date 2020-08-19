@@ -33,7 +33,7 @@ namespace MarketWomanCalculator
             {
                 textBox1.Clear();
             }
-           
+
 
             textBox1.Text += button.Text;
             values += button.Text;
@@ -50,7 +50,7 @@ namespace MarketWomanCalculator
             {
                 textBox1.Text += button.Text;
                 Sign = button.Text;
-         
+
                 values += button.Text;
 
             }
@@ -60,26 +60,24 @@ namespace MarketWomanCalculator
             {
                 try
                 {
-                    var removeLast = values.Remove(values.Length - 1);
+                   
+                    
+                     var removeLast = values.Remove(values.Length - 1);
 
-                    var data = Utils.ExtractValues(removeLast);
+                        var data = Utils.ExtractIntFromString(removeLast);
 
-                    Calculator calculatorData = new Calculator(data[0], data[1], Sign);
+                        Calculator calculatorData = new Calculator(data[0], data[1], Sign);
+
+                        var result = calc.Calculate(calculatorData);
 
 
-                    var result = calc.Calculate(calculatorData);
+                        textBox2.Text = result.ToString();
 
+                        values = result.ToString() + Sign;
+                    
 
-                    textBox2.Text = result.ToString();
-
-                    values = result.ToString() + Sign;
                 }
-                catch (Exception ex)
-                {
-
-                }
-                
-
+                catch (Exception) { }
 
 
             }
@@ -100,24 +98,45 @@ namespace MarketWomanCalculator
 
         private void Calculate_Button_Click(object sender, EventArgs e)
         {
-            
-                var data = Utils.ExtractValues(values);
 
-                Calculator calculatorData = new Calculator(data[0], data[1], Sign);
-                var result = calc.Calculate(calculatorData);
-
-           
-
-            if (result == 0)
+            try
             {
-               textBox2.Text = Errors.DivideByZeroExceptionMessage();
+                if (!textBox1.Text.StartsWith("-"))
+                {
+                    var data = Utils.ExtractIntFromString(values);
+
+                    Calculator calculatorData = new Calculator(data[0], data[1], Sign);
+                    var result = calc.Calculate(calculatorData);
+
+
+                    textBox2.Text = result.ToString();
+                    values = result.ToString();
+                }
+                else
+                {
+                    var data = Utils.ExtractIntFromString(values);
+
+                    Calculator calculatorData = new Calculator(data[0], data[1], "-");
+                    var result = calc.Calculate(calculatorData);
+
+
+                    textBox2.Text = result.ToString();
+                    values = result.ToString();
+
+                }
+                
+                  
+                
+              
+
+
             }
-            else
+            catch (DivideByZeroException)
             {
-                textBox2.Text = result.ToString();
-                values = result.ToString();
+                textBox2.Text = Errors.DivideByZeroExceptionMessage();
+
             }
-            
+            catch (Exception) { }
 
         }
 
@@ -128,6 +147,24 @@ namespace MarketWomanCalculator
 
         private void ClearEntry_Button_Clicked(object sender, EventArgs e)
         {
+            var text = textBox1.Text;
+            textBox1.Text = text.Remove(text.Length - 1);
+            
+        }
+
+        private void P_N_Button_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0")
+            {
+                textBox1.Clear();
+            }
+            textBox1.Text = "-" + textBox1.Text;
+            
+
+            
+            
+            
+
 
         }
     }

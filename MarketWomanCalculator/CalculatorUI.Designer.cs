@@ -48,6 +48,7 @@
             this.button20 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -111,7 +112,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 86);
             this.button5.TabIndex = 0;
-            this.button5.Text = "CE";
+            this.button5.Text = "<=";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.ClearEntry_Button_Clicked);
             // 
@@ -278,7 +279,7 @@
             this.button20.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button20.Location = new System.Drawing.Point(22, 444);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(194, 86);
+            this.button20.Size = new System.Drawing.Size(94, 86);
             this.button20.TabIndex = 0;
             this.button20.Text = "0";
             this.button20.UseVisualStyleBackColor = false;
@@ -309,11 +310,25 @@
             this.textBox2.Text = "\r\n";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button11.Location = new System.Drawing.Point(122, 444);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(94, 86);
+            this.button11.TabIndex = 0;
+            this.button11.Text = "-/+";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.P_N_Button_Click);
+            // 
             // CalculatorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 568);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button20);
@@ -366,6 +381,7 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button11;
     }
 }
 

@@ -7,36 +7,48 @@ namespace CalculatorClassLibrary
 {
     public class CalculatorRepository : ICalculatorRepository
     {
-        public double Addition(int firstNumber, int secondNumber)
+        public double Addition(double firstNumber, double secondNumber)
         {
-            var result = firstNumber + secondNumber;
-            return result;
+            if (firstNumber < 0 || secondNumber < 0)
+            {
+                throw new ArgumentException("Please enter valid values");
+            }
+            else
+            {
+                var result = firstNumber + secondNumber;
+                return result;
+            }
+           
         }
 
-        public double Minus(int firstNumber, int secondNumber)
+        public double Minus(double firstNumber , double secondNumber )
         {
             var result = firstNumber - secondNumber;
             return result;
         }
 
-        public double Times(int firstNumber, int secondNumber)
+        public double Times(double firstNumber, double secondNumber)
         {
             return firstNumber * secondNumber;
         }
 
-        public double Divide(int firstNumber, int secondNumber)
+        public double Divide(double firstNumber, double secondNumber)
         {
-            try
+            if (firstNumber == 0 || secondNumber == 0)
+            {
+                throw new DivideByZeroException("You cannot divide by zero");
+            }
+            else if (firstNumber < 0 || secondNumber < 0)
+            {
+                throw new ArgumentException("Please enter valid values");
+            }
+            else
             {
                 var result = firstNumber / secondNumber;
                 return result;
             }
-            catch (DivideByZeroException)
-            {
-                return 0;
-             
-            }
-            
+
+
         }
 
         public double Calculate(Calculator calculator)

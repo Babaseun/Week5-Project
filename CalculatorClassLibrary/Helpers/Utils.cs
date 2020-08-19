@@ -8,34 +8,38 @@ namespace MarketWomanCalculator
 {
     public static class Utils
     {
-        public static List<int> ExtractValues(string value)
+        public static List<double> ExtractIntFromString(string value)
         {
 
-            try
-            {
                 var operators = Regex.Match(value, "[-|+|/|*]");
 
                 var firstValue = value.Substring(0, operators.Index);
                 var secondValue = string.Join("", value.Skip(firstValue.Length + 1));
 
-                return new List<int> { int.Parse(firstValue), int.Parse(secondValue) };
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+                return new List<double> { double.Parse(firstValue), double.Parse(secondValue) };
+               
 
         }
 
-        public static int CountValues(string value)
+        public static string Data(string value)
         {
+            var index = "";
 
-            var values = Regex.Matches(value, "[-|+|/|*]");
+            var operators = Regex.Matches(value, "[-|+|/|*]");
 
-            return values.Count;
+            foreach (Match item in operators)
+            {
+                index += item.Index;
+            }
+
+            return index;
+
+
+            
 
         }
+
+        
 
     }
 }

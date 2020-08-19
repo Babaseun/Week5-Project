@@ -64,5 +64,21 @@ namespace Calculator.Test
 
 
         }
+        [Fact]
+        public void DivideByZero()
+        {
+            int firstValue = 4;
+            int secondValue = 0;
+
+            CalculatorRepository op = new CalculatorRepository();
+           
+
+
+            Assert.Throws<DivideByZeroException>(() => op.Divide(firstValue, secondValue));
+            
+
+
+        }
+       
     }
 }

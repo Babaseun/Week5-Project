@@ -2,10 +2,10 @@
 {
     public class Calculator
     {
-        public int FirstValue { get; set; }
-        public int SecondValue { get; set; }
+        public double FirstValue { get; set; }
+        public double SecondValue { get; set; }
         public string Sign { get; set; }
-        public Calculator(int firstValue, int secondValue, string sign)
+        public Calculator(double firstValue, double secondValue, string sign)
         {
             this.FirstValue = firstValue;
             this.SecondValue = secondValue;
