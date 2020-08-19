@@ -54,12 +54,11 @@ namespace MarketWomanCalculator
                 try
                 {
 
+                    var removeLastOperator = values.Remove(values.Length - 1); // Removes the last Operator Calculation is done based on the two values provided
 
-                    var removeLast = values.Remove(values.Length - 1); // Removes the last Operator Calculation is done based on the two values provided
+                    var listOfDoubles = Utils.ExtractValuesFromString(removeLastOperator); // Returns the extracted values from a string as a list of double
 
-                    var data = Utils.ExtractValuesFromString(removeLast); // Returns the extracted values from a string as a list of double
-
-                    Calculator calculatorData = new Calculator(data[0], data[1], Sign);// An Object is created of the Calculator class
+                    Calculator calculatorData = new Calculator(listOfDoubles[0], listOfDoubles[1], Sign);// An Object is created of the Calculator class
 
                     var result = calc.Calculate(calculatorData);  // Calls the calculate method of the CalculatorRepository class and returns the result
 
@@ -96,9 +95,9 @@ namespace MarketWomanCalculator
             {
                 if (!textBox1.Text.StartsWith("-")) // Checks if first operation is not based on a negative value
                 {
-                    var data = Utils.ExtractValuesFromString(values); // Extracting the values
+                    var listOfDoubles = Utils.ExtractValuesFromString(values); // Extracting the values
 
-                    Calculator calculatorData = new Calculator(data[0], data[1], Sign); // Creating an object of the Calculator class
+                    Calculator calculatorData = new Calculator(listOfDoubles[0], listOfDoubles[1], Sign); // Creating an object of the Calculator class
                     var result = calc.Calculate(calculatorData);
 
 
@@ -107,9 +106,9 @@ namespace MarketWomanCalculator
                 }
                 else  // Performs operation if the first value is based on a negative value
                 {
-                    var data = Utils.ExtractValuesFromString(values); // Extraction of the values
+                    var listOfDoubles = Utils.ExtractValuesFromString(values); // Extraction of the values
 
-                    Calculator calculatorData = new Calculator(data[0], data[1], "-");
+                    Calculator calculatorData = new Calculator(listOfDoubles[0], listOfDoubles[1], "-");
                     var result = calc.Calculate(calculatorData);
 
 
